@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity"
+    >
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#396ccd"
+        android:id="@+id/ai_tb"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Neighbourhood AI"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:textColor="#F6EBEB"
+            android:textStyle="italic|bold"
+            android:textAlignment="center"
+            />
+
+    </Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_ai"
+        android:layout_below="@+id/ai_tb"
+        android:layout_above="@+id/layout"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        >
+
+        <EditText
+            android:background="@drawable/aistylke"
+            android:id="@+id/et_ai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Questions"
+            android:textSize="20dp"
+            android:padding="16dp"
+            android:layout_toLeftOf="@id/sent"
+            />
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:id="@+id/sent"
+            android:src="@drawable/sent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="?attr/selectableItemBackground"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
