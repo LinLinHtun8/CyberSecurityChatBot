@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- This config is specifically for DEBUG BUILDS ONLY. -->
+    <!-- It allows all cleartext traffic (HTTP) for easier development. -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" /> <!-- Also allows user-installed certificates for proxying -->
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+    
